@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 project(spacecraftcc)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
@@ -15,8 +15,17 @@ conan_basic_setup()
 #TRACE：日志级别的临时信息(信息白色)
 #message(DEBUG "${CMAKE_BINARY_DIR}}")
 
-add_executable(spacecraftcc main.cpp)
+if (CMAKE_BUILD_TYPE MATCHES Debug)
+    message(" ")
+    message("CMAKE IN DEBUG MODE")
+    message(" ")
+elseif(CMAKE_BUILD_TYPE MATCHES Release)
+    message(" ")
+    message("CMAKE IN RELEASE MODE")
+    message(" ")
+endif ()
 
+add_executable(spacecraftcc main.cpp)
 target_link_libraries(spacecraftcc ${CONAN_LIBS})
 
 
