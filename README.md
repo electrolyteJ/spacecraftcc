@@ -1,5 +1,5 @@
 # install deps
-cd cmake-build-debug && conan install ..
+cd cmake-build-debug && conan install .. --build
 
 .conan/profiles/default
 ```
