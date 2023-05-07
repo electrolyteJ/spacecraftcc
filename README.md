@@ -1,5 +1,19 @@
-# install deps
-cd cmake-build-debug && conan install .. --build
+
+# 包管理
+
+包管理| 包集成 | pc | 移动端
+---|---|---|---
+vcpkg| cmake的find_package/find_library |支持|不支持
+homebrew | cmake的find_package/find_library |支持|不支持
+conan | conan管理|支持|支持
+xrepo/xmake| xrepo/xmake管理|支持|支持
+prefab|cmake的find_package/find_library |不支持|仅支持Android
+
+# homebrew install deps
+brew install xxx
+
+# conan install deps
+cd cmake-build-debug && conan install ..
 
 .conan/profiles/default
 ```
