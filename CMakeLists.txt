@@ -30,7 +30,8 @@ find_package(fmt CONFIG REQUIRED)
 find_package(folly CONFIG REQUIRED)
 #find_library(FOLLY_LIBRARY folly)
 #message("folly: ${FOLLY_LIBRARY}")
-add_executable(spacecraftcc main.cpp)
+file(GLOB_RECURSE source_files "src/*.cpp")
+add_executable(spacecraftcc ${source_files})
 target_link_libraries(spacecraftcc glog::glog fmt::fmt ${FOLLY_LIBRARY})
 
 
