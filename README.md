@@ -1,5 +1,5 @@
 
-# 构建系统
+# 构建/发布/包管理
 
 包管理| 包集成 | pc | 移动端
 ---|---|---|---
@@ -9,7 +9,7 @@ conan | conan管理|支持|支持
 xrepo/xmake| xrepo/xmake管理|支持|支持
 prefab|cmake的find_package/find_library |不支持|仅支持Android
 
-构建| 包管理 | 语言 
+构建系统| 包管理 | 语言 
 ---|---|---
 meson| 内置| 多种语言
 cmake| 不支持|c/cpp
